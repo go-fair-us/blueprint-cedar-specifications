@@ -1,0 +1,78 @@
+type: instance
+name: "NIAID BP metadata example - ImmPort SDY998"
+description: "Schema compliant with the NIAID Blueprint for FAIR metadata. This version provides more specific and correct profiles for many fields."
+id: "https://repo.metadatacenter.org/template-instances/45214e71-e84e-41e3-b702-44cb33bdd8d9"
+isBasedOn: "https://repo.metadatacenter.org/templates/bf5c4fc0-8a01-488d-9151-31aae2635f7c"
+createdOn: "2026-09-03T12:15:14-07:00"
+createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+modifiedOn: "2026-09-03T12:18:00-07:00"
+modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+children:
+  type:
+    id: "https://schema.org/Dataset"
+    label: "Dataset"
+  identifier:
+    id: "https://doi.org/10.21430/M3KXJHSP4T"
+  name:
+    value: "SDY998: AMP Rheumatoid Arthritis Phase 1"
+  description:
+    value: "Study file describes the relationship of PERIOD and STUDY_GLOSSARY to a STUDY providing the content of the PERIOD, PLANNED_VISIT, and STUDY_GLOSSSARY table content for the given study."
+  dateCreated:
+    datatype: xsd:date
+    value: "2017-11-17"
+  Author(s):
+    id: "https://repo.metadatacenter.org/template-element-instances/9ccd72e9-2f4c-424e-9d11-270b087942fa"
+    children:
+      accountablePerson:
+        - id: "https://orcid.org/0000-0002-1450-1549"
+          label: "Jennifer Anolik"
+        - id: "https://orcid.org/0000-0002-1219-3845"
+          label: "Vivian P. Bykerk, MD FRCPC"
+        - id: "https://orcid.org/0000-0003-4483-0359"
+          label: "Larry Moreland"
+        - id: "https://orcid.org/0000-0002-5634-7746"
+          label: "V. Michael Holers"
+  funder:
+    - id: "https://ror.org/043z4tv69"
+      label: "National Institute of Allergy and Infectious Diseases"
+    - id: "https://ror.org/006zn3t30"
+      label: "National Institute of Arthritis and Musculoskeletal and Skin Diseases"
+  funding:
+    - value: "1UH2AR067676-01 (NIAID is secondary)"
+  measurementTechnique:
+    - id: "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16585"
+      label: "Flow Cytometry"
+    - id: "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C192768"
+      label: "RNA Sequence Analysis"
+  distribution:
+    - id: "https://immport.org/shared/study/SDY998"
+  host:
+    - id: "http://purl.bioontology.org/ontology/NCBITAXON/9606"
+      label: "Homo sapiens"
+  healthCondition:
+    - id: "http://purl.obolibrary.org/obo/MONDO_0005178"
+      label: "osteoarthritis"
+    - id: "http://purl.obolibrary.org/obo/MONDO_0008383"
+      label: "rheumatoid arthritis"
+  conditionsOfAccess:
+    - value: "https://docs.immport.org/home/agreement/"
+  License(s):
+    - id: "https://repo.metadatacenter.org/template-element-instances/613a4729-b370-466f-8c96-7f632939dea1"
+      children:
+        licenseIdentifierIri:
+          id: "https://docs.immport.org/home/agreement/"
+  Spatial Coverage:
+    - id: "https://repo.metadatacenter.org/template-element-instances/5bff0f56-0db0-4946-bef7-2fe97d2e2277"
+      children:
+        addressCountry:
+          - id: "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17234"
+            label: "United States"
+  Temporal Coverage:
+    - id: "https://repo.metadatacenter.org/template-element-instances/7dd56650-82e5-4a89-b94d-831a02fdca55"
+      children:
+        startDate:
+          datatype: xsd:date
+          value: "2016-03-15"
+        endDate:
+          datatype: xsd:date
+          value: "2024-07-25"

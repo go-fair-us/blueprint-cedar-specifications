@@ -1,0 +1,652 @@
+type: template
+name: "NIAID Blueprint Compliant Schema 0.7.0"
+description: "Schema compliant with the NIAID Blueprint for FAIR metadata. This version provides more specific and correct profiles for many fields."
+id: "https://repo.metadatacenter.org/templates/bf5c4fc0-8a01-488d-9151-31aae2635f7c"
+status: published
+version: 0.7.0
+modelVersion: 1.6.0
+previousVersion: "https://repo.metadatacenter.org/templates/c659bb0a-c85b-45c5-881c-bd7beab4d8be"
+createdOn: "2026-09-02T18:54:37-07:00"
+createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+modifiedOn: "2026-09-02T18:56:03-07:00"
+modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+children:
+  - key: "type"
+    type: controlled-term-field
+    name: "type"
+    description: "Content type of the digital object being described (e.g., dataset, software application, image; a type of schema.org CreativeWork)"
+    id: "https://repo.metadatacenter.org/template-fields/01d60045-50a6-4abf-81fc-3c81407752a8"
+    status: published
+    version: 0.5.0
+    modelVersion: 1.6.0
+    prefLabel: "Digital Object Type"
+    datatype: iri
+    default:
+      value: "https://schema.org/Dataset"
+      label: "Dataset"
+    values:
+      - type: branch
+        sourceAcronym: "SCHEMA"
+        sourceName: "Schema.org core and all extension vocabularies (SCHEMA)"
+        termBaseIri: "https://schema.org/CreativeWork"
+        termBaseLabel: "CreativeWork"
+        termMaxDepth: 0
+    actions:
+      - action: delete
+        termIri: "http://purl.org/dc/dcmitype/Dataset"
+        sourceIri: "http://schema.org/CreativeWork"
+        sourceAcronym: "SCHEMA"
+        type: class
+      - action: delete
+        termIri: "http://rdfs.org/ns/void#Dataset"
+        sourceIri: "http://schema.org/CreativeWork"
+        sourceAcronym: "SCHEMA"
+        type: class
+      - action: move
+        to: 0
+        termIri: "https://schema.org/Dataset"
+        sourceIri: "https://schema.org/CreativeWork"
+        sourceAcronym: "SCHEMA"
+        type: class
+    previousVersion: "https://repo.metadatacenter.org/template-fields/4f3a42cf-e9e2-4127-ba14-0176344a1aa1"
+    derivedFrom: "https://repo.metadatacenter.org/template-fields/a65e727f-e60a-4abf-8868-5921d37642a2"
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    configuration:
+      propertyIri: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+  - key: "identifier"
+    type: link-field
+    name: "identifier"
+    description: "A globally unique, persistent, machine resolvable identifier (GUPRI) assigned to the digital object."
+    id: "https://repo.metadatacenter.org/template-fields/ec041627-1cad-461b-a457-2ed17b2e5764"
+    status: published
+    version: 0.2.0
+    modelVersion: 1.6.0
+    prefLabel: "Identifier"
+    previousVersion: "https://repo.metadatacenter.org/template-fields/883a2080-044a-44ff-98d1-113746dadbc7"
+    derivedFrom: "https://repo.metadatacenter.org/template-fields/f658915d-fae4-4c23-91a0-6f540268dcfb"
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    configuration:
+      propertyIri: "https://schema.org/identifier"
+  - key: "name"
+    type: text-field
+    name: "name"
+    description: "Descriptive title or name of the digital object."
+    id: "https://repo.metadatacenter.org/template-fields/d13b025b-66dc-4782-afda-59fd30ae0a3a"
+    status: published
+    version: 0.2.0
+    modelVersion: 1.6.0
+    prefLabel: "Name"
+    previousVersion: "https://repo.metadatacenter.org/template-fields/a8fbc6be-88fa-4aad-a727-d7e9f1a069a9"
+    derivedFrom: "https://repo.metadatacenter.org/template-fields/8732c9fe-bdb8-4451-9ce1-212802bd71a8"
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    configuration:
+      propertyIri: "https://schema.org/name"
+  - key: "description"
+    type: text-area-field
+    name: "description"
+    description: "A description of the digital object."
+    id: "https://repo.metadatacenter.org/template-fields/f879a412-2389-49f8-a87d-688137eefebe"
+    status: published
+    version: 0.2.0
+    modelVersion: 1.6.0
+    prefLabel: "Description"
+    previousVersion: "https://repo.metadatacenter.org/template-fields/ec409260-6301-40e7-b263-c25f8851479d"
+    derivedFrom: "https://repo.metadatacenter.org/template-fields/cef2c611-f0fc-4128-84f7-a492f36011f5"
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    configuration:
+      propertyIri: "https://schema.org/description"
+  - key: "dateCreated"
+    type: temporal-field
+    name: "dateCreated"
+    description: "The date on which the digital object was created, or if that is not known, date the item was added to a data repository."
+    id: "https://repo.metadatacenter.org/template-fields/ee84e4b5-12ff-4137-bba8-a58f28ecac22"
+    status: published
+    version: 0.2.0
+    modelVersion: 1.6.0
+    prefLabel: "Date Created/Added"
+    datatype: xsd:date
+    granularity: day
+    previousVersion: "https://repo.metadatacenter.org/template-fields/2734ceb6-2be2-454f-8404-e5d76661af8c"
+    derivedFrom: "https://repo.metadatacenter.org/template-fields/208e6ff2-d32b-473c-b78d-190e95f4fdf5"
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    configuration:
+      propertyIri: "https://schema.org/dateCreated"
+  - key: "Author(s)"
+    type: element
+    name: "Author(s)"
+    description: "Person(s) and/or organization(s) responsible for the creation of the digital object. Both users and organizations may be independently specified, each as often as appropriate."
+    id: "https://repo.metadatacenter.org/template-elements/6b0c3f88-8283-484d-918c-c019adebec98"
+    status: published
+    version: 0.2.3
+    modelVersion: 1.6.0
+    previousVersion: "https://repo.metadatacenter.org/template-elements/2edd65ad-6bfc-4686-9821-a8184d46cb7e"
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    prefLabel: "Author(s)"
+    children:
+      - key: "accountablePerson"
+        type: ext-orcid-field
+        name: "accountablePerson"
+        description: "A person responsible for the creation of the digital object, identified by the person's ORCID ID. (Both users and organizations may be specified independently, each as often as appropriate.)"
+        id: "https://repo.metadatacenter.org/template-fields/03e0ff6e-e4f5-448c-ae18-7abc20a67984"
+        status: published
+        version: 0.2.1
+        modelVersion: 1.6.0
+        prefLabel: "Author (Human)"
+        createdOn: "2026-09-02T18:54:37-07:00"
+        createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        modifiedOn: "2026-09-02T18:54:37-07:00"
+        modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        configuration:
+          propertyIri: "https://schema.org/accountablePerson"
+          multiple: true
+          minItems: 1
+      - key: "sourceOrganization"
+        type: ext-ror-field
+        name: "sourceOrganization"
+        description: "An organization responsible for the creation of the digital object, identified by the organization's Research Organization Resource Identifier. This specifies an organization as a direct source (not \"the organization of the author\" per se). (Both users and organizations may be specified as sources, each as often as appropriate.)"
+        id: "https://repo.metadatacenter.org/template-fields/be921b12-3ae2-4452-9010-6d408379ebed"
+        status: published
+        version: 0.2.0
+        modelVersion: 1.6.0
+        prefLabel: "Organizational Author"
+        createdOn: "2026-09-02T18:54:37-07:00"
+        createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        modifiedOn: "2026-09-02T18:54:37-07:00"
+        modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        configuration:
+          propertyIri: "http://schema.org/sourceOrganization"
+          multiple: true
+          minItems: 1
+    configuration:
+      propertyIri: "https://schema.org/author"
+      overrideLabel: "author"
+  - key: "funder"
+    type: ext-ror-field
+    name: "funder"
+    description: "Organization(s) providing funding for the digital object, expressed as Research Organization Resource(s) (RORs)."
+    id: "https://repo.metadatacenter.org/template-fields/c83192f8-4d36-4e3a-8fdd-107bebaf8ddf"
+    status: published
+    version: 0.2.0
+    modelVersion: 1.6.0
+    prefLabel: "Funder(s)"
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    configuration:
+      propertyIri: "https://schema.org/funder"
+      multiple: true
+      minItems: 1
+  - key: "funding"
+    type: text-field
+    name: "funding"
+    description: "Grant or contract number(s) or other identifier(s) associated with funding the digital object."
+    id: "https://repo.metadatacenter.org/template-fields/1476264e-51dc-4de2-b7a2-97aefb70e63c"
+    status: published
+    version: 0.2.0
+    modelVersion: 1.6.0
+    prefLabel: "Grant(s)"
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    configuration:
+      propertyIri: "https://schema.org/funding"
+      multiple: true
+      minItems: 1
+  - key: "measurementTechnique"
+    type: controlled-term-field
+    name: "measurementTechnique"
+    description: "Technique(s) or technologies used to make measurements in the digital object. Selected from NCIT concepts under Method, Laboratory Procedure, and Disease Screening."
+    id: "https://repo.metadatacenter.org/template-fields/5c8a432b-7f6b-42c6-9fd2-5caa90d4993c"
+    status: published
+    version: 0.2.0
+    modelVersion: 1.6.0
+    prefLabel: "Measurement Technique(s)"
+    datatype: iri
+    values:
+      - type: branch
+        sourceAcronym: "NCIT"
+        sourceName: "National Cancer Institute Thesaurus (NCIT)"
+        termBaseIri: "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C71460"
+        termBaseLabel: "Method"
+        termMaxDepth: 0
+      - type: branch
+        sourceAcronym: "NCIT"
+        sourceName: "National Cancer Institute Thesaurus (NCIT)"
+        termBaseIri: "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25294"
+        termBaseLabel: "Laboratory Procedure"
+        termMaxDepth: 0
+      - type: branch
+        sourceAcronym: "NCIT"
+        sourceName: "undefined (NCIT)"
+        termBaseIri: "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15419"
+        termBaseLabel: "Disease Screening"
+        termMaxDepth: 0
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    configuration:
+      propertyIri: "https://schema.org/measurementTechnique"
+      multiple: true
+      minItems: 1
+  - key: "distribution"
+    type: link-field
+    name: "distribution"
+    description: "Link(s) to a downloadable distribution of the digital object. Provide links that resolve to the host page for the bit stream, file, or collection of the digital object; if there is no host page, provide the direct link to download the digital object."
+    id: "https://repo.metadatacenter.org/template-fields/d3e89c17-fc72-4d30-894d-178ab915aae4"
+    status: published
+    version: 0.2.0
+    modelVersion: 1.6.0
+    prefLabel: "Distribution Link(s)"
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    configuration:
+      propertyIri: "https://schema.org/distribution"
+      multiple: true
+      minItems: 1
+  - key: "citation"
+    type: link-field
+    name: "citation"
+    description: "Link(s) to citations or references to another creative work related to the digital object. This can include a publication that describes the digital object, a publication that makes use of the digital object, or a collection that includes the digital object."
+    id: "https://repo.metadatacenter.org/template-fields/b7b488fa-9db9-4fa3-ba9c-a6e0fa900660"
+    status: published
+    version: 0.2.0
+    modelVersion: 1.6.0
+    prefLabel: "Citation(s)"
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    configuration:
+      propertyIri: "https://schema.org/citation"
+      multiple: true
+      minItems: 1
+  - key: "infectiousAgent"
+    type: controlled-term-field
+    name: "infectiousAgent"
+    description: "Infectious agent(s) involved in the digital object."
+    id: "https://repo.metadatacenter.org/template-fields/affe647c-b4c3-440c-a339-b98a7badf9a1"
+    status: published
+    version: 0.3.0
+    modelVersion: 1.6.0
+    prefLabel: "Infectious Agent(s)"
+    datatype: iri
+    values:
+      - type: ontology
+        sourceAcronym: "NCBITAXON"
+        sourceName: "National Center for Biotechnology Information (NCBI) Organismal Classification"
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    configuration:
+      propertyIri: "https://schema.org/infectiousAgent"
+      multiple: true
+      minItems: 1
+  - key: "host"
+    type: controlled-term-field
+    name: "host"
+    description: "Host organism(s) associated with the digital object."
+    id: "https://repo.metadatacenter.org/template-fields/2dcfac33-64ea-40cd-a282-fd7746dd02a1"
+    status: published
+    version: 0.4.0
+    modelVersion: 1.6.0
+    prefLabel: "Host(s)"
+    datatype: iri
+    values:
+      - type: ontology
+        sourceAcronym: "NCBITAXON"
+        sourceName: "National Center for Biotechnology Information (NCBI) Organismal Classification"
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    configuration:
+      propertyIri: "https://schema.org/taxonomicRange"
+      overrideLabel: "taxonomicRange"
+      multiple: true
+      minItems: 1
+  - key: "healthCondition"
+    type: controlled-term-field
+    name: "healthCondition"
+    description: "Health condition(s) referenced in the digital object. Selected from MONDO's disease susceptibility, injury, and human disease branches."
+    id: "https://repo.metadatacenter.org/template-fields/f1086755-facc-4757-bd41-cacee7de0cf0"
+    status: published
+    version: 0.2.0
+    modelVersion: 1.6.0
+    prefLabel: "Health Condition(s)"
+    datatype: iri
+    values:
+      - type: branch
+        sourceAcronym: "MONDO"
+        sourceName: "Mondo Disease Ontology (MONDO)"
+        termBaseIri: "http://purl.obolibrary.org/obo/MONDO_0042489"
+        termBaseLabel: "disease susceptibility"
+        termMaxDepth: 0
+      - type: branch
+        sourceAcronym: "MONDO"
+        sourceName: "Mondo Disease Ontology (MONDO)"
+        termBaseIri: "http://purl.obolibrary.org/obo/MONDO_0021178"
+        termBaseLabel: "injury"
+        termMaxDepth: 0
+      - type: branch
+        sourceAcronym: "MONDO"
+        sourceName: "Mondo Disease Ontology (MONDO)"
+        termBaseIri: "http://purl.obolibrary.org/obo/MONDO_0700096"
+        termBaseLabel: "human disease"
+        termMaxDepth: 0
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    configuration:
+      propertyIri: "https://schema.org/healthCondition"
+      multiple: true
+      minItems: 1
+  - key: "conditionsOfAccess"
+    type: text-area-field
+    name: "conditionsOfAccess"
+    description: "The condition(s) under which the digital object can be accessed, including data use agreements or limitations. May be specified as one or more IRIs linking to the conditions of access. (Broad categories of access are expressed by the vocabularies COAR (https://vocabularies.coar-repositories.org/access_rights/) and EuroVoc's Access RIght concept (https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/access-right).)"
+    id: "https://repo.metadatacenter.org/template-fields/e6d9ce26-cc76-43d3-bfa8-7f848e7145bb"
+    status: published
+    version: 0.2.0
+    modelVersion: 1.6.0
+    prefLabel: "Conditions of Access"
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    configuration:
+      propertyIri: "https://schema.org/conditionsOfAccess"
+      multiple: true
+      minItems: 1
+  - key: "License(s)"
+    type: element
+    name: "License(s)"
+    description: "License(s) under which the digital object is distributed. Licenses can be specified as SPDX identifiers ('Selection'), other 'Generic' IRIs identifying/pointing to licenses, or free text description ('Terms')."
+    id: "https://repo.metadatacenter.org/template-elements/f62f261f-2820-45bf-b0f8-8237a273f215"
+    status: published
+    version: 0.2.2
+    modelVersion: 1.6.0
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    prefLabel: "License(s)"
+    children:
+      - key: "licenseIdentifierSelection"
+        type: controlled-term-field
+        name: "licenseIdentifierSelection"
+        description: "License(s) under which the digital object is distributed, specified as a selection from SPDX vocabulary."
+        id: "https://repo.metadatacenter.org/template-fields/8c7db195-9b07-4214-88f9-20df634fa2f7"
+        status: published
+        version: 0.2.0
+        modelVersion: 1.6.0
+        prefLabel: "License Identifier Selection"
+        datatype: iri
+        values:
+          - type: branch
+            sourceAcronym: "FDC-GDMT"
+            sourceName: "undefined (FDC-GDMT)"
+            termBaseIri: "http://vocab.fairdatacollective.org/gdmt/LicenseIdentifier"
+            termBaseLabel: "License Identifier"
+            termMaxDepth: 0
+        previousVersion: "https://repo.metadatacenter.org/template-fields/7b6b4ad1-f7b7-4872-a476-5be8c5d2cf46"
+        derivedFrom: "https://repo.metadatacenter.org/template-fields/955e2bfa-e023-48f6-9b77-2b8a716d65dc"
+        createdOn: "2026-09-02T18:54:37-07:00"
+        createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        modifiedOn: "2026-09-02T18:54:37-07:00"
+        modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        configuration:
+          propertyIri: "https://schema.org/termCode"
+          overrideLabel: "termCode"
+      - key: "licenseIdentifierIri"
+        type: link-field
+        name: "licenseIdentifierIri"
+        description: "License specified as a generic (non-SPDX) identifier in IRI format"
+        id: "https://repo.metadatacenter.org/template-fields/0de9fdd0-0244-4d39-a7a3-7a1576bb8f57"
+        status: published
+        version: 0.2.0
+        modelVersion: 1.6.0
+        prefLabel: "License Identifier (Generic IRI)"
+        createdOn: "2026-09-02T18:54:37-07:00"
+        createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        modifiedOn: "2026-09-02T18:54:37-07:00"
+        modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        configuration:
+          propertyIri: "https://schema.org/identifier"
+          overrideLabel: "identifier"
+      - key: "licenseTerms"
+        type: text-field
+        name: "licenseTerms"
+        description: "Text characterizing the licensing terms that apply to the digital object."
+        id: "https://repo.metadatacenter.org/template-fields/eb5f62e3-79c7-4419-aeb2-3a73c098697f"
+        status: published
+        version: 0.2.0
+        modelVersion: 1.6.0
+        prefLabel: "License Terms Description"
+        createdOn: "2026-09-02T18:54:37-07:00"
+        createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        modifiedOn: "2026-09-02T18:54:37-07:00"
+        modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        configuration:
+          propertyIri: "https://schema.org/termsOfService"
+          overrideLabel: "termsOfService"
+    configuration:
+      propertyIri: "https://schema.org/license"
+      overrideLabel: "license"
+      multiple: true
+      minItems: 1
+  - key: "Spatial Coverage"
+    type: element
+    name: "Spatial Coverage"
+    description: "The geographic area covered by the digital object. Each set of 4 fields describes one geospatial location. The total area covered is the union of all the sets."
+    id: "https://repo.metadatacenter.org/template-elements/c8097827-0dd5-4cfb-8e40-041216879989"
+    status: published
+    version: 0.3.0
+    modelVersion: 1.6.0
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    prefLabel: "Spatial Coverage"
+    children:
+      - key: "addressCountry"
+        type: controlled-term-field
+        name: "addressCountry"
+        description: "Identifier for a country representing geospatial coverage of the digital object."
+        id: "https://repo.metadatacenter.org/template-fields/120b5fcf-f67b-47a3-bc4a-0a55ddb5472d"
+        status: published
+        version: 0.2.0
+        modelVersion: 1.6.0
+        prefLabel: "Country Identifier"
+        datatype: iri
+        values:
+          - type: branch
+            sourceAcronym: "NCIT"
+            sourceName: "National Cancer Institute Thesaurus (NCIT)"
+            termBaseIri: "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25464"
+            termBaseLabel: "Country"
+            termMaxDepth: 0
+        createdOn: "2026-09-02T18:54:37-07:00"
+        createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        modifiedOn: "2026-09-02T18:54:37-07:00"
+        modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        configuration:
+          propertyIri: "https://schema.org/addressCountry"
+          multiple: true
+          minItems: 1
+      - key: "containedInPlace"
+        type: controlled-term-field
+        name: "containedInPlace"
+        description: "An identifier for a geospatial region, such as a city, county, or geospatial feature. Identifiers are taken from the GAZ gazetteer."
+        id: "https://repo.metadatacenter.org/template-fields/6ac47969-5425-4c75-9287-701b49b9303f"
+        status: published
+        version: 0.1.0
+        modelVersion: 1.6.0
+        prefLabel: "Geo Place ID"
+        datatype: iri
+        values:
+          - type: ontology
+            sourceAcronym: "GAZ"
+            sourceName: "Gazetteer"
+        createdOn: "2026-09-02T18:54:37-07:00"
+        createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        modifiedOn: "2026-09-02T18:54:37-07:00"
+        modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        configuration:
+          propertyIri: "https://schema.org/containedInPlace"
+          multiple: true
+          minItems: 1
+      - key: "geo"
+        type: text-field
+        name: "geo"
+        description: "A set of longitude and latitude coordinates in decimal degrees representing a geographic coverage. Negative values correspond to western longitude and southern latitudes. More than one pair of points within an entry represents a shape (2 points a line, 3 points a triangle, and so on), with points forming a clockwise closed contained with contents on the right side. Multiple points or shapes are represented by multiple entries."
+        id: "https://repo.metadatacenter.org/template-fields/330aa727-02b8-4d80-8318-ebc629effa96"
+        status: published
+        version: 0.2.1
+        modelVersion: 1.6.0
+        prefLabel: "Geospatial Region Coordinates"
+        createdOn: "2026-09-02T18:54:37-07:00"
+        createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        modifiedOn: "2026-09-02T18:54:37-07:00"
+        modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        configuration:
+          propertyIri: "https://schema.org/geo"
+          multiple: true
+          minItems: 1
+      - key: "applicableLocation"
+        type: text-field
+        name: "applicableLocation"
+        description: "A representation of spatial coverage using shapes or  geometries, such as polygons or regions, using the Well-Known Text (WKT) specification (https://docs.ogc.org/is/12-063r5/12-063r5.html#30). Each entry represents a separate WKT-defined geographic area. (3-dimensional areas may also be specified; see the specification.)"
+        id: "https://repo.metadatacenter.org/template-fields/c235adb4-ec82-482c-8a6a-8ea3a7b6b274"
+        status: published
+        version: 0.2.0
+        modelVersion: 1.6.0
+        prefLabel: "GeoShape (WKT)"
+        createdOn: "2026-09-02T18:54:37-07:00"
+        createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        modifiedOn: "2026-09-02T18:54:37-07:00"
+        modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        configuration:
+          propertyIri: "https://schema.org/applicableLocation"
+          multiple: true
+          minItems: 1
+    configuration:
+      propertyIri: "https://schema.org/spatialCoverage"
+      overrideLabel: "spatialCoverage"
+      multiple: true
+      minItems: 1
+  - key: "Temporal Coverage"
+    type: element
+    name: "Temporal Coverage"
+    description: "Period of time represented by a digital object. Multiple intervals may be specified. User may enter any or all of the 4 fields for each interval, depending on the relevance of each field."
+    id: "https://repo.metadatacenter.org/template-elements/6f1e3e09-23c5-465e-b1b6-d005a517ec1c"
+    status: published
+    version: 0.3.0
+    modelVersion: 1.6.0
+    createdOn: "2026-09-02T18:54:37-07:00"
+    createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    modifiedOn: "2026-09-02T18:54:37-07:00"
+    modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+    prefLabel: "Temporal Coverage"
+    children:
+      - key: "startDate"
+        type: temporal-field
+        name: "startDate"
+        description: "Earliest date applicable for this digital object"
+        id: "https://repo.metadatacenter.org/template-fields/4f430bcc-b110-40ce-8026-97e309c6cb07"
+        status: published
+        version: 0.2.0
+        modelVersion: 1.6.0
+        prefLabel: "Start Date"
+        datatype: xsd:date
+        granularity: day
+        createdOn: "2026-09-02T18:54:37-07:00"
+        createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        modifiedOn: "2026-09-02T18:54:37-07:00"
+        modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        configuration:
+          propertyIri: "https://schema.org/startDate"
+      - key: "startTime"
+        type: temporal-field
+        name: "startTime"
+        description: "Earliest time applicable for this digital object"
+        id: "https://repo.metadatacenter.org/template-fields/9abc68f1-b399-4928-b967-c53eb131e36a"
+        status: published
+        version: 0.2.0
+        modelVersion: 1.6.0
+        prefLabel: "Start Time"
+        datatype: xsd:time
+        granularity: second
+        inputTimeFormat: 12h
+        inputTimeZone: true
+        createdOn: "2026-09-02T18:54:37-07:00"
+        createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        modifiedOn: "2026-09-02T18:54:37-07:00"
+        modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        configuration:
+          propertyIri: "https://schema.org/startTime"
+      - key: "endDate"
+        type: temporal-field
+        name: "endDate"
+        description: "Latest date applicable for this digital object"
+        id: "https://repo.metadatacenter.org/template-fields/f2f1dbab-efef-49e6-bf1c-46a58b112955"
+        status: published
+        version: 0.2.0
+        modelVersion: 1.6.0
+        prefLabel: "End Date"
+        datatype: xsd:date
+        granularity: day
+        createdOn: "2026-09-02T18:54:37-07:00"
+        createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        modifiedOn: "2026-09-02T18:54:37-07:00"
+        modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        configuration:
+          propertyIri: "https://schema.org/endDate"
+      - key: "endTime"
+        type: temporal-field
+        name: "endTime"
+        description: "Latest time applicable for this digital object"
+        id: "https://repo.metadatacenter.org/template-fields/3ab6b3e0-3fe7-467c-801c-c4936cd5a11a"
+        status: published
+        version: 0.2.0
+        modelVersion: 1.6.0
+        prefLabel: "End Time"
+        datatype: xsd:time
+        granularity: second
+        inputTimeFormat: 12h
+        inputTimeZone: true
+        createdOn: "2026-09-02T18:54:37-07:00"
+        createdBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        modifiedOn: "2026-09-02T18:54:37-07:00"
+        modifiedBy: "https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee"
+        configuration:
+          propertyIri: "https://schema.org/endTime"
+    configuration:
+      propertyIri: "https://schema.org/temporalCoverage"
+      overrideLabel: "temporalCoverage"
+      multiple: true
+      minItems: 1
