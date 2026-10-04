@@ -1,0 +1,48 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix pav: <http://purl.org/pav/>.
+@prefix schema: <http://schema.org/>.
+@prefix oslc: <http://open-services.net/ns/core#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+
+<https://repo.metadatacenter.org/template-instances/45214e71-e84e-41e3-b702-44cb33bdd8d9> <https://schema.org/license> <https://repo.metadatacenter.org/template-element-instances/613a4729-b370-466f-8c96-7f632939dea1>;
+    <https://schema.org/identifier> <https://doi.org/10.21430/M3KXJHSP4T>;
+    <https://schema.org/spatialCoverage> <https://repo.metadatacenter.org/template-element-instances/5bff0f56-0db0-4946-bef7-2fe97d2e2277>;
+    <https://schema.org/temporalCoverage> <https://repo.metadatacenter.org/template-element-instances/7dd56650-82e5-4a89-b94d-831a02fdca55>;
+    <https://schema.org/author> <https://repo.metadatacenter.org/template-element-instances/9ccd72e9-2f4c-424e-9d11-270b087942fa>;
+    <https://schema.org/conditionsOfAccess> "https://docs.immport.org/home/agreement/";
+    <https://schema.org/dateCreated> "2017-11-17"^^xsd:date;
+    <https://schema.org/description> "Study file describes the relationship of PERIOD and STUDY_GLOSSARY to a STUDY providing the content of the PERIOD, PLANNED_VISIT, and STUDY_GLOSSSARY table content for the given study.";
+    <https://schema.org/distribution> <https://immport.org/shared/study/SDY998>;
+    <https://schema.org/funder> <https://ror.org/043z4tv69>, <https://ror.org/006zn3t30>;
+    <https://schema.org/funding> "1UH2AR067676-01 (NIAID is secondary)";
+    <https://schema.org/healthCondition> <http://purl.obolibrary.org/obo/MONDO_0005178>, <http://purl.obolibrary.org/obo/MONDO_0008383>;
+    <https://schema.org/taxonomicRange> <http://purl.bioontology.org/ontology/NCBITAXON/9606>;
+    <https://schema.org/measurementTechnique> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16585>, <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C192768>;
+    <https://schema.org/name> "SDY998: AMP Rheumatoid Arthritis Phase 1";
+    oslc:modifiedBy <https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee>;
+    pav:createdBy <https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee>;
+    pav:createdOn "2026-09-03T12:15:14-07:00"^^xsd:dateTime;
+    pav:lastUpdatedOn "2026-09-03T12:18:00-07:00"^^xsd:dateTime;
+    schema:description "Schema compliant with the NIAID Blueprint for FAIR metadata. This version provides more specific and correct profiles for many fields.";
+    schema:isBasedOn <https://repo.metadatacenter.org/templates/bf5c4fc0-8a01-488d-9151-31aae2635f7c>;
+    schema:name "NIAID BP metadata example - ImmPort SDY998";
+    a <https://schema.org/Dataset>.
+<https://repo.metadatacenter.org/template-element-instances/613a4729-b370-466f-8c96-7f632939dea1> <https://schema.org/identifier> <https://docs.immport.org/home/agreement/>.
+<https://repo.metadatacenter.org/template-element-instances/5bff0f56-0db0-4946-bef7-2fe97d2e2277> <https://schema.org/addressCountry> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17234>.
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17234> rdfs:label "United States".
+<https://repo.metadatacenter.org/template-element-instances/7dd56650-82e5-4a89-b94d-831a02fdca55> <https://schema.org/endDate> "2024-07-25"^^xsd:date;
+    <https://schema.org/startDate> "2016-03-15"^^xsd:date.
+<https://ror.org/043z4tv69> rdfs:label "National Institute of Allergy and Infectious Diseases".
+<https://repo.metadatacenter.org/template-element-instances/9ccd72e9-2f4c-424e-9d11-270b087942fa> <https://schema.org/accountablePerson> <https://orcid.org/0000-0002-1450-1549>, <https://orcid.org/0000-0002-1219-3845>, <https://orcid.org/0000-0003-4483-0359>, <https://orcid.org/0000-0002-5634-7746>.
+<https://ror.org/006zn3t30> rdfs:label "National Institute of Arthritis and Musculoskeletal and Skin Diseases".
+<http://purl.obolibrary.org/obo/MONDO_0005178> rdfs:label "osteoarthritis".
+<http://purl.obolibrary.org/obo/MONDO_0008383> rdfs:label "rheumatoid arthritis".
+<http://purl.bioontology.org/ontology/NCBITAXON/9606> rdfs:label "Homo sapiens".
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16585> rdfs:label "Flow Cytometry".
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C192768> rdfs:label "RNA Sequence Analysis".
+<https://orcid.org/0000-0002-1450-1549> rdfs:label "Jennifer Anolik".
+<https://schema.org/Dataset> rdfs:label "Dataset".
+<https://orcid.org/0000-0002-1219-3845> rdfs:label "Vivian P. Bykerk, MD FRCPC".
+<https://orcid.org/0000-0003-4483-0359> rdfs:label "Larry Moreland".
+<https://orcid.org/0000-0002-5634-7746> rdfs:label "V. Michael Holers".

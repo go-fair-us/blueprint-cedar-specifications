@@ -1,0 +1,43 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix pav: <http://purl.org/pav/>.
+@prefix schema: <http://schema.org/>.
+@prefix oslc: <http://open-services.net/ns/core#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+
+<https://repo.metadatacenter.org/template-instances/d2c033f9-0546-41ff-94c8-79ddefd7a0a9> <https://schema.org/spatialCoverage> <https://repo.metadatacenter.org/template-element-instances/50e1933c-5b0b-4bf9-ae53-b3f43650ae64>;
+    <https://schema.org/temporalCoverage> <https://repo.metadatacenter.org/template-element-instances/44759fd3-8176-47b3-8df5-7d550b757b45>;
+    <https://schema.org/citation> <https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(22)00088-1/fulltext>;
+    <https://schema.org/author> <https://repo.metadatacenter.org/template-element-instances/90b3d420-3a4f-42b9-986a-b38182a6c6bc>;
+    <https://schema.org/conditionsOfAccess> "https://accessclinicaldata.niaid.nih.gov/dashboard/Public/files/NIAID_DAR.pdf";
+    <https://schema.org/dateCreated> "2022-05-01"^^xsd:date;
+    <https://schema.org/description> "“The dataset includes patient-level data from the ACTT-4 study, covering demographics (age, gender, comorbidities), treatment arms (baricitinib + remdesivir or dexamethasone + remdesivir…” [Example dataset description]";
+    <https://schema.org/distribution> <https://accessclinicaldata.niaid.nih.gov/study-viewer/clinical_trials/NCT04640168>;
+    <https://schema.org/funder> <https://ror.org/043z4tv69>;
+    <https://schema.org/funding> "UM1AI148450", "UM1AI148575", "UM1AI148576", "UM1AI148684", "UM1AI148685", "UM1AI148689";
+    <https://schema.org/healthCondition> <http://purl.obolibrary.org/obo/MONDO_0100096>;
+    <https://schema.org/taxonomicRange> <http://purl.bioontology.org/ontology/NCBITAXON/9606>;
+    <https://schema.org/infectiousAgent> <http://purl.bioontology.org/ontology/NCBITAXON/694009>;
+    <https://schema.org/measurementTechnique> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83312>;
+    <https://schema.org/name> "(Released May 2022) Adaptive COVID-19 Treatment Trial 4 (ACTT-4)";
+    oslc:modifiedBy <https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee>;
+    pav:createdBy <https://metadatacenter.org/users/1adf5ee5-cee0-47d1-9769-efbe00cdebee>;
+    pav:createdOn "2026-09-04T14:38:08-07:00"^^xsd:dateTime;
+    pav:lastUpdatedOn "2026-09-04T14:40:01-07:00"^^xsd:dateTime;
+    schema:description "Schema compliant with the NIAID Blueprint for FAIR metadata. This version provides more specific and correct profiles for many fields.";
+    schema:isBasedOn <https://repo.metadatacenter.org/templates/bf5c4fc0-8a01-488d-9151-31aae2635f7c>;
+    schema:name "NIAID BP metadata example ACDN ACTT-4 study";
+    a <https://schema.org/Dataset>;
+    <https://schema.org/license> <https://repo.metadatacenter.org/template-element-instances/a73f446e-252a-4295-ad94-f202e334de02>.
+<https://repo.metadatacenter.org/template-element-instances/44759fd3-8176-47b3-8df5-7d550b757b45> <https://schema.org/endDate> "2021-06-30"^^xsd:date;
+    <https://schema.org/startDate> "2020-11-24"^^xsd:date.
+<https://ror.org/043z4tv69> rdfs:label "National Institute of Allergy and Infectious Diseases".
+<https://repo.metadatacenter.org/template-element-instances/90b3d420-3a4f-42b9-986a-b38182a6c6bc> <https://schema.org/accountablePerson> <https://orcid.org/0000-0001-8922-0488>, <https://orcid.org/0000-0002-2011-1010>.
+<http://purl.obolibrary.org/obo/MONDO_0100096> rdfs:label "COVID-19".
+<http://purl.bioontology.org/ontology/NCBITAXON/9606> rdfs:label "Homo sapiens".
+<http://purl.bioontology.org/ontology/NCBITAXON/694009> rdfs:label "Severe acute respiratory syndrome-related coronavirus".
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83312> rdfs:label "Laboratory Test Method".
+<https://schema.org/Dataset> rdfs:label "Dataset".
+<https://orcid.org/0000-0001-8922-0488> rdfs:label "Nina Kreuzberger".
+<https://orcid.org/0000-0002-2011-1010> rdfs:label "Caroline Hirsch".
+<https://repo.metadatacenter.org/template-element-instances/a73f446e-252a-4295-ad94-f202e334de02> <https://schema.org/identifier> <https://accessclinicaldata.niaid.nih.gov/dashboard/Public/files/NIAIDDUA2021Accessclinicaldata@NIAID.pdf>.
